@@ -2,7 +2,7 @@
 #CPU version
 
 #FROM tensorflow/tensorflow:1.12.0-py3
-FROM tensorflow/tensorflow:1.12.0-py3
+FROM tensorflow/tensorflow:1.14.0-py3
 
 
 ENV LANG=C.UTF-8
@@ -15,6 +15,7 @@ RUN pip3 install -r requirements.txt
 #RUN python3 download_model.py 774M
 
 RUN python3 download_model.py 1558M
+
 RUN apt-get update; apt install -y wget
 RUN wget https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.x86_64 -O /usr/local/bin/ttyd \
     && chmod +x /usr/local/bin/ttyd
